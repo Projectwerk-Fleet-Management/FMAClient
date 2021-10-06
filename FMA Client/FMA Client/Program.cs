@@ -6,7 +6,7 @@ namespace FMA_Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello1");
+            Console.WriteLine("Hello mama");
         }
     }
 }
