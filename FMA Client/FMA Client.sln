@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMA Client", "FMA Client\FMA Client.csproj", "{B5447274-A37F-4158-A3F2-EE28D22576C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5447274-A37F-4158-A3F2-EE28D22576C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5447274-A37F-4158-A3F2-EE28D22576C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5447274-A37F-4158-A3F2-EE28D22576C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5447274-A37F-4158-A3F2-EE28D22576C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6607F3B1-4C06-45B9-82D9-A6FC22409448}
+	EndGlobalSection
+EndGlobal
