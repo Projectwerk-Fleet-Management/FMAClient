@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {}
+    "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {
+    "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
+        "projectUniqueName": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
         "projectName": "FMA Client",
-        "projectPath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
-        "packagesPath": "C:\\Users\\marnick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\obj\\",
+        "projectPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
+        "packagesPath": "C:\\Users\\anton-maurits\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\marnick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\anton-maurits\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
