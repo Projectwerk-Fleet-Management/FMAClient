@@ -14,3 +14,22 @@ C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0
 C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\ref\FMA Client.dll
 C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.pdb
 C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.genruntimeconfig.cache
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.exe
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.deps.json
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.runtimeconfig.json
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.runtimeconfig.dev.json
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.dll
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\ref\FMA Client.dll
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.pdb
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.AssemblyReference.cache
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.GeneratedMSBuildEditorConfig.editorconfig
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.AssemblyInfoInputs.cache
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.AssemblyInfo.cs
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.CoreCompileInputs.cache
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.dll
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\ref\FMA Client.dll
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.pdb
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.genruntimeconfig.cache
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.dll
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.pdb
+E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.CopyComplete
