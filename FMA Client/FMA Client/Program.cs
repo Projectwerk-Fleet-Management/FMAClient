@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessLayer.Validators;
 
 namespace FMA_Client
 {
@@ -6,7 +7,9 @@ namespace FMA_Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello mama");
+            NINValidator x = new NINValidator();
+            bool test = x.isValid("93.11.23-283.87");
+
         }
     }
 }

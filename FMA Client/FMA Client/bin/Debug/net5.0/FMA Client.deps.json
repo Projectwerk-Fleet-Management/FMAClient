@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "FMA Client/1.0.0": {
+        "dependencies": {
+          "BusinessLayer": "1.0.0"
+        },
         "runtime": {
           "FMA Client.dll": {}
+        }
+      },
+      "BusinessLayer/1.0.0": {
+        "runtime": {
+          "BusinessLayer.dll": {}
         }
       }
     }
   },
   "libraries": {
     "FMA Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

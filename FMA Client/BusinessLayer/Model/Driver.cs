@@ -40,5 +40,7 @@ namespace BusinessLayer
             AssignedFuelcard = assignedFuelcard;
         }
 
+        //TODO: GetDriverDetails() 
+
     }
 }
