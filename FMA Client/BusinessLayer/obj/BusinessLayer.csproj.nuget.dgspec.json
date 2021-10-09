@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {}
+    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj": {
+    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
-        "projectName": "FMA Client",
-        "projectPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
+        "projectUniqueName": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+        "projectName": "BusinessLayer",
+        "projectPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\marni\\.nuget\\packages\\",
-        "outputPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\FMA Client\\obj\\",
+        "outputPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marni\\AppData\\Roaming\\NuGet\\NuGet.Config",
