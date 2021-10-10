@@ -2,26 +2,26 @@
 {
     public class Car
     {
-        private string _make;
-        private string _model;
-        private string _vin;
-        private string _licenseplate;
-        private string _colour;
-        private string _doors;
-        private Driver _driver;
-        private string _type;
+        public string Make { private set; get; }
+        public string Model { private set; get; }
+        public string Vin { private set; get; }
+        public string Licenseplate { private set; get; }
+        public string Colour { private set; get; }
+        public string Doors { private set; get; }
+        public Driver Driver { private set; get; }
+        public string Type { private set; get; }
 
-        public Car(string make, string model, string vin, string licenseplate, string colour, string doors,
-            Driver driver, string type)
+        public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors,
+            Driver Driver, string Type)
         {
-            _make = make;
-            _model = model;
-            _vin = vin;
-            _licenseplate = licenseplate;
-            _colour = colour;
-            _doors = doors;
-            _driver = driver;
-            _type = type;
+            this.Make = Make;
+            this.Model = Model;
+            this.Vin = Vin;
+            this.Licenseplate = Licenseplate;
+            this.Colour = Colour;
+            this.Doors = Doors;
+            this.Driver = Driver;
+            this.Type = Type;
         }
 
 
