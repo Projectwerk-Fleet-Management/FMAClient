@@ -24,7 +24,14 @@
             this.Type = Type;
         }
 
+        // TODO: GetCarDetail() / (Set / Update / Remove) -> Driver, Colour, Doors 
+        public void SetDriver(Driver driver)
+        {
 
+        }
+        public void RemoveDriver()
+        {
 
+        }
     }
 }
