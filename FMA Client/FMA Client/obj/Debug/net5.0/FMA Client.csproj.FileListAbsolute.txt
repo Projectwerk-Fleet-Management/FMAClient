@@ -33,3 +33,22 @@ E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\
 E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.dll
 E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.pdb
 E:\Protobear\Development\Unity\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.CopyComplete
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.exe
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.deps.json
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.runtimeconfig.json
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.runtimeconfig.dev.json
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.dll
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\ref\FMA Client.dll
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\FMA Client.pdb
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.dll
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\bin\Debug\net5.0\BusinessLayer.pdb
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.AssemblyReference.cache
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.AssemblyInfoInputs.cache
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.AssemblyInfo.cs
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.CoreCompileInputs.cache
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.csproj.CopyComplete
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.dll
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\ref\FMA Client.dll
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.pdb
+C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\FMA Client\obj\Debug\net5.0\FMA Client.genruntimeconfig.cache
