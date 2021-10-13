@@ -17,11 +17,7 @@ namespace BusinessLayer
         public List<LicenseType> Licenses { get; private set; }
         public Car AssignedCar { get; private set; }
         public Fuelcard AssignedFuelcard { get; private set; }
-<<<<<<< Updated upstream
         private static NINValidator IDValidator = new NINValidator();
-=======
-        static private NINValidator IDValidator;
->>>>>>> Stashed changes
 
         //TODO: Address add to constructors
         //Constructor without car and fuelcard
