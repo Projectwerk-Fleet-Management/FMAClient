@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,16 @@ using Xunit;
 using BusinessLayer;
 using BusinessLayer.Model;
 using BusinessLayer.Exceptions;
+=======
+﻿using BusinessLayer;
+using Xunit;
+>>>>>>> Stashed changes
 
 namespace BusinessLayerTests
 {
     public class DriverTests
     {
+<<<<<<< Updated upstream
         public List<LicenseType> licenses = new List<LicenseType> {LicenseType.A, LicenseType.BE };
         //public Driver toTest = new("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", new List<LicenseType> { LicenseType.A, LicenseType.BE });
         
@@ -41,10 +47,27 @@ namespace BusinessLayerTests
         //Tests with car and without fuelcard
         [Fact]
         public void Test_Ctor_Car_NoFuelcard_Valid()
+=======
+        private Driver toTest;
+
+        [Fact]
+        public void ctor_NoCar_NoFuelcard_Valid()
         {
 
         }
         [Fact]
+        public void ctor_NoCar_NoFuelcard_Invalid()
+        {
+
+        }
+        [Fact]
+        public void ctor_NoCar_Fuelcard_Valid()
+>>>>>>> Stashed changes
+        {
+
+        }
+        [Fact]
+<<<<<<< Updated upstream
         public void Test_Ctor_Car_NoFuelcard_Invalid()
         {
 
@@ -53,10 +76,19 @@ namespace BusinessLayerTests
         //Tests without car and with fuelcard
         [Fact]
         public void Test_Ctor_NoCar_Fuelcard_Valid()
+=======
+        public void ctor_NoCar_Fuelcard_Invalid()
         {
 
         }
         [Fact]
+        public void ctor_Car_NoFuelcard_Valid()
+>>>>>>> Stashed changes
+        {
+
+        }
+        [Fact]
+<<<<<<< Updated upstream
         public void Test_Ctor_NoCar_Fuelcard_Invalid()
         {
 
@@ -65,11 +97,23 @@ namespace BusinessLayerTests
         //Tests with car and fuelcard
         [Fact]
         public void Test_Ctor_Car_Fuelcard_Valid()
+=======
+        public void ctor_Car_NoFuelcard_Invalid()
         {
 
         }
         [Fact]
+        public void ctor_Car_Fuelcard_Valid()
+>>>>>>> Stashed changes
+        {
+
+        }
+        [Fact]
+<<<<<<< Updated upstream
         public void Test_Ctor_Car_Fuelcard_Invalid()
+=======
+        public void ctor_Car_Fuelcard_Invalid()
+>>>>>>> Stashed changes
         {
 
         }
