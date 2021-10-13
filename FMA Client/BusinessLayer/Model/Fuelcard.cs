@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BusinessLayer.Exceptions;
+using BusinessLayer.Validators;
 
 namespace BusinessLayer
 {
@@ -13,6 +14,8 @@ namespace BusinessLayer
         public Driver Driver { private set; get; }
         public bool isActive { private set; get; }
 
+        private FuelcardNumberValidator validator = new FuelcardNumberValidator();
+
         public Fuelcard(string cardnumber, DateTime expiryDate)
         {
             if (cardnumber == null)
@@ -20,10 +23,13 @@ namespace BusinessLayer
                 throw new FuelcardException("Cardnumber cannot be null");
             }
 
+            if (!validator.isValid(cardnumber))
+            {
+                throw new FuelcardException("The entered fuelcardnumber is not valid");
+            }
             if (expiryDate < DateTime.Now)
             {
                 throw new FuelcardException("This card is already expired");
-                //TODO: Ask if this is needed
             }
             Cardnumber = cardnumber;
             ExpiryDate = expiryDate;
@@ -37,10 +43,13 @@ namespace BusinessLayer
                 throw new FuelcardException("Cardnumber cannot be null");
             }
 
+            if (!validator.isValid(cardnumber))
+            {
+                throw new FuelcardException("The entered fuelcardnumber is not valid");
+            }
             if (expiryDate < DateTime.Now)
             {
                 throw new FuelcardException("This card is already expired");
-                //TODO: Ask if this is needed
             }
             Cardnumber = cardnumber;
             ExpiryDate = expiryDate;
@@ -58,10 +67,13 @@ namespace BusinessLayer
                 throw new FuelcardException("Cardnumber cannot be null");
             }
 
+            if (!validator.isValid(cardnumber))
+            {
+                throw new FuelcardException("The entered fuelcardnumber is not valid");
+            }
             if (expiryDate < DateTime.Now)
             {
                 throw new FuelcardException("This card is already expired");
-                //TODO: Ask if this is needed
             }
             Cardnumber = cardnumber;
             ExpiryDate = expiryDate;
