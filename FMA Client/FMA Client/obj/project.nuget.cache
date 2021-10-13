@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "7UsvR1vAJBz/lYROtSKKiijWsI+JG+SCTZ4WY+zVep94AbPUEoQD0Mvn85c9K8LlkXy6QFvCFiLzOcFsTTiX5g==",
+=======
+  "dgSpecHash": "dGlpg5tn00vHVDQNmCADKLd7AjEnZR4k8ijYo5u4evGvFCz8GfoWPQVS9qF+Jf94uydctBFKiRIjyvdKsi/eaw==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
   "expectedPackageFiles": [],

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "qCfjLBolXxpmn/fz7aSbGlP3bZMu9ov8ETVHWRTc9Oq+ff6Sx5Mim2fi1HlrTh0fXbbYz7lwdxNNYU0rDkd2+A==",
+=======
+  "dgSpecHash": "nGq95tm1VrsngeBLGo4ds10VJy6BBFqLThXecxMCI1qGDSPFV7vshIGdxvlWcn/9beyYyhwrEov6s53TW/E6HA==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj",
   "expectedPackageFiles": [
