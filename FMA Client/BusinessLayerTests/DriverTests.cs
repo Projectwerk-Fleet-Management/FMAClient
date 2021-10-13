@@ -1,14 +1,20 @@
+<<<<<<< Updated upstream
 using System;
 using System.Collections.Generic;
 using Xunit;
 using BusinessLayer;
 using BusinessLayer.Model;
 using BusinessLayer.Exceptions;
+=======
+﻿using BusinessLayer;
+using Xunit;
+>>>>>>> Stashed changes
 
 namespace BusinessLayerTests
 {
     public class DriverTests
     {
+<<<<<<< Updated upstream
         public List<LicenseType> licenses = new List<LicenseType> {LicenseType.A, LicenseType.BE };
         //public Driver toTest = new("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", new List<LicenseType> { LicenseType.A, LicenseType.BE });
 
@@ -101,6 +107,49 @@ namespace BusinessLayerTests
         public void Test_Ctor_Car_Fuelcard_Invalid(Car car, Fuelcard fuelcard)
         {
             Assert.Throws<DriverException>(() => new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, car, fuelcard));
+=======
+        private Driver toTest;
+
+        [Fact]
+        public void ctor_NoCar_NoFuelcard_Valid()
+        {
+
+        }
+        [Fact]
+        public void ctor_NoCar_NoFuelcard_Invalid()
+        {
+
+        }
+        [Fact]
+        public void ctor_NoCar_Fuelcard_Valid()
+        {
+
+        }
+        [Fact]
+        public void ctor_NoCar_Fuelcard_Invalid()
+        {
+
+        }
+        [Fact]
+        public void ctor_Car_NoFuelcard_Valid()
+        {
+
+        }
+        [Fact]
+        public void ctor_Car_NoFuelcard_Invalid()
+        {
+
+        }
+        [Fact]
+        public void ctor_Car_Fuelcard_Valid()
+        {
+
+        }
+        [Fact]
+        public void ctor_Car_Fuelcard_Invalid()
+        {
+
+>>>>>>> Stashed changes
         }
     }
 }
