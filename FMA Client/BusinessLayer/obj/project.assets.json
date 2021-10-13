@@ -8,19 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Bryan\\.nuget\\packages\\": {}
+    "C:\\Users\\marnick\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
-      "packagesPath": "C:\\Users\\Bryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\obj\\",
+      "projectPath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\marnick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Bryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marnick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
