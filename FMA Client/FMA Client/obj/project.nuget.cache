@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "iS7kQxkYAw3uhx3/5f8Jc3+H/Efmjly09tkwmb3viPi47/I70zou30vtObALcZSSTxiLXZzZNE10Pn7HOJ/jpQ==",
+  "dgSpecHash": "7UsvR1vAJBz/lYROtSKKiijWsI+JG+SCTZ4WY+zVep94AbPUEoQD0Mvn85c9K8LlkXy6QFvCFiLzOcFsTTiX5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
+  "projectFilePath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\FMA Client.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\FMA Client\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
