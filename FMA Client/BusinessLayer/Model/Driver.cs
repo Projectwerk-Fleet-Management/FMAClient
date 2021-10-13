@@ -17,12 +17,9 @@ namespace BusinessLayer
         public List<LicenseType> Licenses { get; private set; }
         public Car AssignedCar { get; private set; }
         public Fuelcard AssignedFuelcard { get; private set; }
-<<<<<<< Updated upstream
-        private NINValidator IDValidator = new NINValidator();
-=======
-        static private NINValidator IDValidator;
->>>>>>> Stashed changes
+        private static NINValidator IDValidator = new NINValidator();
 
+        //TODO: Address add to constructors
         //Constructor without car and fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
         {
@@ -43,7 +40,7 @@ namespace BusinessLayer
         }
 
         //Constructor with car and without fuelcard
-        public Driver(string id, string lastName, string firstName, Address address, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar)
+        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar)
         {
             if (id == null) throw new DriverException("Id cannot be null");
             if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
@@ -57,7 +54,6 @@ namespace BusinessLayer
             Id = id;
             LastName = lastName;
             FirstName = firstName;
-            Address = address;
             DateOfBirth = dateOfBirth;
             NationalIdentificationNumber = nationalIdentificationNumber;
             Licenses = licenses;
@@ -65,7 +61,7 @@ namespace BusinessLayer
         }
 
         //Constructor without car and with fuelcard
-        public Driver(string id, string lastName, string firstName, Address address, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard)
+        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard)
         {
             if (id == null) throw new DriverException("Id cannot be null");
             if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
@@ -79,7 +75,6 @@ namespace BusinessLayer
             Id = id;
             LastName = lastName;
             FirstName = firstName;
-            Address = address;
             DateOfBirth = dateOfBirth;
             NationalIdentificationNumber = nationalIdentificationNumber;
             Licenses = licenses;
@@ -87,7 +82,7 @@ namespace BusinessLayer
         }
 
         //Constructor with car and fuelcard
-        public Driver(string id, string lastName, string firstName, Address address, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard)
+        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard)
         {
             if (id == null) throw new DriverException("Id cannot be null");
             if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
@@ -103,7 +98,6 @@ namespace BusinessLayer
             Id = id;
             LastName = lastName;
             FirstName = firstName;
-            Address = address;
             DateOfBirth = dateOfBirth;
             NationalIdentificationNumber = nationalIdentificationNumber;
             Licenses = licenses;

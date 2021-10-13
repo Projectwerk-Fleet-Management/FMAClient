@@ -1,26 +1,17 @@
-<<<<<<< Updated upstream
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using BusinessLayer;
 using BusinessLayer.Model;
 using BusinessLayer.Exceptions;
-=======
-﻿using BusinessLayer;
-using Xunit;
->>>>>>> Stashed changes
 
 namespace BusinessLayerTests
 {
     public class DriverTests
     {
-<<<<<<< Updated upstream
         public List<LicenseType> licenses = new List<LicenseType> {LicenseType.A, LicenseType.BE };
         //public Driver toTest = new("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", new List<LicenseType> { LicenseType.A, LicenseType.BE });
-        
+
         //Tests without car or fuelcard
         [Fact]
         public void Test_Ctor_NoCar_NoFuelcard_Valid()
@@ -47,75 +38,69 @@ namespace BusinessLayerTests
         //Tests with car and without fuelcard
         [Fact]
         public void Test_Ctor_Car_NoFuelcard_Valid()
-=======
-        private Driver toTest;
-
-        [Fact]
-        public void ctor_NoCar_NoFuelcard_Valid()
         {
+            Driver toTest = new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, new Car("Toyota", "Yaris", "1HGB41JXMN109186", "1-xxx-000", "Hatchback", Fuel.Benzine));
 
+            Assert.Equal("1", toTest.Id);
+            Assert.Equal("Batselier", toTest.LastName);
+            Assert.Equal("Bryan", toTest.FirstName);
+            Assert.Equal(new DateTime(1993, 11, 23), toTest.DateOfBirth);
+            Assert.Equal("93.11.23-283.87", toTest.NationalIdentificationNumber);
+            Assert.Equal(new List<LicenseType> { LicenseType.A, LicenseType.BE }, toTest.Licenses);
+            //TODO: Check why comparing the entir car object doesn't work
+            Assert.Equal("Toyota", toTest.AssignedCar.Make);
         }
-        [Fact]
-        public void ctor_NoCar_NoFuelcard_Invalid()
-        {
 
-        }
-        [Fact]
-        public void ctor_NoCar_Fuelcard_Valid()
->>>>>>> Stashed changes
+        [Theory]
+        [InlineData(null)]
+        public void Test_Ctor_Car_NoFuelcard_Invalid(Car car)
         {
-
-        }
-        [Fact]
-<<<<<<< Updated upstream
-        public void Test_Ctor_Car_NoFuelcard_Invalid()
-        {
-
+            Assert.Throws<DriverException>(() => new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, car));
         }
 
         //Tests without car and with fuelcard
         [Fact]
-        public void Test_Ctor_NoCar_Fuelcard_Valid()
-=======
-        public void ctor_NoCar_Fuelcard_Invalid()
+         public void Test_Ctor_NoCar_Fuelcard_Valid()
         {
+            Driver toTest = new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, new Fuelcard("012345678901234567",new DateTime(2022,10,13)));
 
+            Assert.Equal("1", toTest.Id);
+            Assert.Equal("Batselier", toTest.LastName);
+            Assert.Equal("Bryan", toTest.FirstName);
+            Assert.Equal(new DateTime(1993, 11, 23), toTest.DateOfBirth);
+            Assert.Equal("93.11.23-283.87", toTest.NationalIdentificationNumber);
+            Assert.Equal(new List<LicenseType> { LicenseType.A, LicenseType.BE }, toTest.Licenses);
+            //TODO: Check why comparing the entire fuelcard object doesn't work
+            Assert.Equal("012345678901234567", toTest.AssignedFuelcard.Cardnumber);
         }
-        [Fact]
-        public void ctor_Car_NoFuelcard_Valid()
->>>>>>> Stashed changes
+        [Theory]
+        [InlineData(null)]
+        public void Test_Ctor_NoCar_Fuelcard_Invalid(Fuelcard fuelcard)
         {
-
-        }
-        [Fact]
-<<<<<<< Updated upstream
-        public void Test_Ctor_NoCar_Fuelcard_Invalid()
-        {
-
+            Assert.Throws<DriverException>(() => new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, fuelcard));
         }
 
         //Tests with car and fuelcard
         [Fact]
         public void Test_Ctor_Car_Fuelcard_Valid()
-=======
-        public void ctor_Car_NoFuelcard_Invalid()
         {
+            Driver toTest = new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, new Car("Toyota", "Yaris", "1HGB41JXMN109186", "1-xxx-000", "Hatchback", Fuel.Benzine), new Fuelcard("012345678901234567", new DateTime(2022, 10, 13)));
 
+            Assert.Equal("1", toTest.Id);
+            Assert.Equal("Batselier", toTest.LastName);
+            Assert.Equal("Bryan", toTest.FirstName);
+            Assert.Equal(new DateTime(1993, 11, 23), toTest.DateOfBirth);
+            Assert.Equal("93.11.23-283.87", toTest.NationalIdentificationNumber);
+            Assert.Equal(new List<LicenseType> { LicenseType.A, LicenseType.BE }, toTest.Licenses);
+            //TODO: Check why comparing the entire car / fuelcard object doesn't work
+            Assert.Equal("Toyota", toTest.AssignedCar.Make);
+            Assert.Equal("012345678901234567", toTest.AssignedFuelcard.Cardnumber);
         }
-        [Fact]
-        public void ctor_Car_Fuelcard_Valid()
->>>>>>> Stashed changes
+        [Theory]
+        [InlineData(null, null)]
+        public void Test_Ctor_Car_Fuelcard_Invalid(Car car, Fuelcard fuelcard)
         {
-
-        }
-        [Fact]
-<<<<<<< Updated upstream
-        public void Test_Ctor_Car_Fuelcard_Invalid()
-=======
-        public void ctor_Car_Fuelcard_Invalid()
->>>>>>> Stashed changes
-        {
-
+            Assert.Throws<DriverException>(() => new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, car, fuelcard));
         }
     }
 }
