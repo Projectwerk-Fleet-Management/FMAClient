@@ -50,14 +50,13 @@ namespace BusinessLayer
             this.FuelType = FuelType;
         }
 
-        // TODO: GetCarDetail() / (Set / Update / Remove) -> Driver, Colour, Doors 
         public void SetDriver(Driver driver)
         {
-
+            this.Driver = driver;
         }
         public void RemoveDriver()
         {
-
+            this.Driver = null;
         }
     }
 }

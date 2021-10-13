@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessLayer.Exceptions;
 using Microsoft.VisualBasic.CompilerServices;
 
 namespace BusinessLayer.Validators
@@ -21,9 +22,18 @@ namespace BusinessLayer.Validators
             }
             System.Diagnostics.Debug.WriteLine(newNIN);
             if (newNIN.Length != _NINLenght) return false;
-
-            int left = int.Parse(newNIN.Substring(0, 9));
-            int right = int.Parse(newNIN.Substring(9));
+            int left;
+            int right;
+            try
+            {
+                left = int.Parse(newNIN.Substring(0, 9));
+                right = int.Parse(newNIN.Substring(9));
+            }
+            catch (Exception ex)
+            {
+                throw new NINValidatorException("Could not correctly seperate left and right", ex);
+            }
+            
 
             //na 2000
             int year = DateTime.Today.Year - 2000;
