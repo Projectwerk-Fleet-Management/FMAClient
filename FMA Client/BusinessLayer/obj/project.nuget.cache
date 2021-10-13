@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8q9e97pNgFsQtkDdu6e2BMXxgzUNFCp7SoTFq2Pre8sFtRh6EIFIAcpc9mrPoVTy3VYwnycZ4TEQ6WhJFyQwnA==",
+<<<<<<< Updated upstream
+  "dgSpecHash": "Oa6cmp6uWbn56NeGHseGaVkNO5ZpU1CT7G3VoZxBbHfbWvaLuC/FMkrHk6/wR+rXfDlGRl59f+toClrZjah/nA==",
+=======
+  "dgSpecHash": "bfi5hIpjPKihRWHeIcjQQArPRDzuGIM5WWA66VBV1qoR2eqSg5kqFRR0RgTHemAzut1hIYZ4wuhvxcStNLiN/Q==",
+>>>>>>> Stashed changes
   "success": true,
-  "projectFilePath": "C:\\Users\\marnick\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Bryan\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
