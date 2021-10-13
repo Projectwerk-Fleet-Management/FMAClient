@@ -10,3 +10,15 @@ E:\Protobear\Development\Unity\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5
 E:\Protobear\Development\Unity\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 E:\Protobear\Development\Unity\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 E:\Protobear\Development\Unity\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
+C:\Users\Bryan\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
