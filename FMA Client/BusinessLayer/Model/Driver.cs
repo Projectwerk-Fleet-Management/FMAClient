@@ -17,7 +17,7 @@ namespace BusinessLayer
         public List<LicenseType> Licenses { get; private set; }
         public Car AssignedCar { get; private set; }
         public Fuelcard AssignedFuelcard { get; private set; }
-        private static NINValidator IDValidator = new NINValidator();
+        private static NINValidator NINValidator = new NINValidator();
 
         //TODO: Address add to constructors
         //Constructor without car and fuelcard
@@ -28,7 +28,7 @@ namespace BusinessLayer
             if (lastName == null) throw new DriverException("Last name cannot be null");
             if (firstName == null) throw new DriverException("First name cannot be null");
             if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (IDValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
+            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
             if (licenses == null) throw new DriverException("Licenses cannot be null");
 
             Id = id;
@@ -47,7 +47,7 @@ namespace BusinessLayer
             if (lastName == null) throw new DriverException("Last name cannot be null");
             if (firstName == null) throw new DriverException("First name cannot be null");
             if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (IDValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
+            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
             if (licenses == null) throw new DriverException("Licenses cannot be null");
             if (assignedCar == null) throw new DriverException("Car cannot be null");
 
@@ -68,7 +68,7 @@ namespace BusinessLayer
             if (lastName == null) throw new DriverException("Last name cannot be null");
             if (firstName == null) throw new DriverException("First name cannot be null");
             if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (IDValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
+            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
             if (licenses == null) throw new DriverException("Licenses cannot be null");
             if (assignedFuelcard == null) throw new DriverException("Fuelcard cannot be null");
 
@@ -90,7 +90,7 @@ namespace BusinessLayer
             if (lastName == null) throw new DriverException("Last name cannot be null");
             if (firstName == null) throw new DriverException("First name cannot be null");
             if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (IDValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
+            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
             if (licenses == null) throw new DriverException("Licenses cannot be null");
             if (assignedCar == null) throw new DriverException("Car cannot be null");
             if (assignedFuelcard == null) throw new DriverException("Fuelcard cannot be null");

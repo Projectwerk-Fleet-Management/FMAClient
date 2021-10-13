@@ -85,7 +85,7 @@ namespace BusinessLayerTests
         [Fact]
         public void Test_Ctor_Car_Fuelcard_Valid()
         {
-            Driver toTest = new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, new Car("Toyota", "Yaris", "1HGB41JXMN109186", "1-xxx-000", "Hatchback", Fuel.Benzine), new Fuelcard("012345678901234567", new DateTime(2022, 10, 13)));
+            Driver toTest = new Driver("1", "Batselier", "Bryan", new DateTime(1993, 11, 23), "93.11.23-283.87", licenses, new Car("Toyota", "Yaris", "1HGB41JXMN109186", "1-xxx-000", "Hatchback", Fuel.Benzine), new Fuelcard("01234567890123456", new DateTime(2022, 10, 13)));
 
             Assert.Equal("1", toTest.Id);
             Assert.Equal("Batselier", toTest.LastName);
@@ -95,7 +95,7 @@ namespace BusinessLayerTests
             Assert.Equal(new List<LicenseType> { LicenseType.A, LicenseType.BE }, toTest.Licenses);
             //TODO: Check why comparing the entire car / fuelcard object doesn't work
             Assert.Equal("Toyota", toTest.AssignedCar.Make);
-            Assert.Equal("012345678901234567", toTest.AssignedFuelcard.Cardnumber);
+            Assert.Equal("01234567890123456", toTest.AssignedFuelcard.Cardnumber);
         }
         [Theory]
         [InlineData(null, null)]
