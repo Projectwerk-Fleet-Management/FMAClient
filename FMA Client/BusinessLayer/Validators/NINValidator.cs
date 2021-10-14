@@ -6,6 +6,7 @@ namespace BusinessLayer.Validators
 {
     public class NINValidator
     {
+        //TODO Try catchen voor onbekende problemen
         private int _NINLenght = 11; //The national identifiation number is 11 characters
 
         public bool isValid(string userNIN)

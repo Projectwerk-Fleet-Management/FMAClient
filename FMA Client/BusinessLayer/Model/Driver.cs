@@ -19,7 +19,7 @@ namespace BusinessLayer
         public Fuelcard AssignedFuelcard { get; private set; }
         private static NINValidator NINValidator = new NINValidator();
 
-        //TODO: Address add to constructors
+        //TODO: Address add to constructors - Exceptions in een methode zetten - Methodes voor car set, set fuelcard (Zelfde bij car en bij fuelcard)
         //Constructor without car and fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
         {
