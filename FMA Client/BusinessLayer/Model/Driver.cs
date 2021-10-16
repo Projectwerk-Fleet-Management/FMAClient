@@ -104,5 +104,20 @@ namespace BusinessLayer
             AssignedCar = assignedCar;
             AssignedFuelcard = assignedFuelcard;
         }
+
+        public void AddFuelcard(Fuelcard f)
+        {
+            AssignedFuelcard = f;
+        }
+
+        public void RemoveFuelcard()
+        {
+            AssignedFuelcard = null;
+        }
+
+        public void AddCar(Car car)
+        {
+            AssignedCar = car; 
+        }
     }
 }
