@@ -83,5 +83,15 @@ namespace BusinessLayer
             isActive = true;
         }
 
+        public void addDriver(Driver d)
+        {
+            Driver = d;
+        }
+
+        public void removeDriver()
+        {
+            Driver = null;
+        }
+
     }
 }
