@@ -19,105 +19,105 @@ namespace BusinessLayer
         public Fuelcard AssignedFuelcard { get; private set; }
         private static NINValidator NINValidator = new NINValidator();
 
-        //TODO: Address add to constructors - Exceptions in een methode zetten - Methodes voor car set, set fuelcard (Zelfde bij car en bij fuelcard)
+        //TODO: Address add to constructors
         //Constructor without car and fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
         {
-            if (id == null) throw new DriverException("id cannot be null");
-            if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
-            if (lastName == null) throw new DriverException("Last name cannot be null");
-            if (firstName == null) throw new DriverException("First name cannot be null");
-            if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
-            if (licenses == null) throw new DriverException("Licenses cannot be null");
-
-            Id = id;
-            LastName = lastName;
-            FirstName = firstName;
-            DateOfBirth = dateOfBirth;
-            NationalIdentificationNumber = nationalIdentificationNumber;
-            Licenses = licenses;
+            SetId(id);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);   
         }
 
         //Constructor with car and without fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar)
         {
-            if (id == null) throw new DriverException("Id cannot be null");
-            if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
-            if (lastName == null) throw new DriverException("Last name cannot be null");
-            if (firstName == null) throw new DriverException("First name cannot be null");
-            if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
-            if (licenses == null) throw new DriverException("Licenses cannot be null");
-            if (assignedCar == null) throw new DriverException("Car cannot be null");
-
-            Id = id;
-            LastName = lastName;
-            FirstName = firstName;
-            DateOfBirth = dateOfBirth;
-            NationalIdentificationNumber = nationalIdentificationNumber;
-            Licenses = licenses;
-            AssignedCar = assignedCar;
+            SetId(id);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);
+            SetCar(assignedCar);
         }
 
         //Constructor without car and with fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard)
         {
-            if (id == null) throw new DriverException("Id cannot be null");
-            if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
-            if (lastName == null) throw new DriverException("Last name cannot be null");
-            if (firstName == null) throw new DriverException("First name cannot be null");
-            if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
-            if (licenses == null) throw new DriverException("Licenses cannot be null");
-            if (assignedFuelcard == null) throw new DriverException("Fuelcard cannot be null");
-
-            Id = id;
-            LastName = lastName;
-            FirstName = firstName;
-            DateOfBirth = dateOfBirth;
-            NationalIdentificationNumber = nationalIdentificationNumber;
-            Licenses = licenses;
-            AssignedFuelcard = assignedFuelcard;
+            SetId(id);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);
+            SetFuelcard(assignedFuelcard);
         }
 
         //Constructor with car and fuelcard
         public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard)
+        {          
+            SetId(id);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);
+            SetCar(assignedCar);
+            SetFuelcard(assignedFuelcard);
+        }
+
+        //Setting of variables
+        public void SetId(string id)
         {
-            if (id == null) throw new DriverException("Id cannot be null");
+            if (id == null) throw new DriverException("id cannot be null");
             if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
-            System.Diagnostics.Debug.WriteLine(this.Id);
-            if (lastName == null) throw new DriverException("Last name cannot be null");
-            if (firstName == null) throw new DriverException("First name cannot be null");
-            if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
-            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
-            if (licenses == null) throw new DriverException("Licenses cannot be null");
-            if (assignedCar == null) throw new DriverException("Car cannot be null");
-            if (assignedFuelcard == null) throw new DriverException("Fuelcard cannot be null");
-
-            Id = id;
-            LastName = lastName;
-            FirstName = firstName;
-            DateOfBirth = dateOfBirth;
-            NationalIdentificationNumber = nationalIdentificationNumber;
-            Licenses = licenses;
-            AssignedCar = assignedCar;
-            AssignedFuelcard = assignedFuelcard;
+            this.Id = id;
         }
-
-        public void AddFuelcard(Fuelcard f)
+        public void SetLastName(string lastName)
         {
-            AssignedFuelcard = f;
+            if (lastName == null) throw new DriverException("Last name cannot be null");
+            this.LastName = lastName;
+        }
+        public void SetFirstName(string firstName)
+        {
+            if (firstName == null) throw new DriverException("First name cannot be null");
+            this.FirstName = firstName;
+        }
+        public void SetDateOfBirth(DateTime dateOfBirth)
+        {
+            if (dateOfBirth == null) throw new DriverException("Date of birth cannot be null");
+            this.DateOfBirth = dateOfBirth;
+        }
+        public void SetNationalIdentificationNumber (string nationalIdentificationNumber)
+        {
+            if (NINValidator.isValid(nationalIdentificationNumber) == false) throw new DriverException("National identification number is not valid");
+            this.NationalIdentificationNumber = nationalIdentificationNumber;
+        }
+        public void SetLicenses (List<LicenseType> licenses)
+        {
+            if (licenses == null) throw new DriverException("Licenses cannot be null");
+            this.Licenses = licenses;
+        }
+        public void SetCar(Car car)
+        {
+            if (car == null) throw new DriverException("Car cannot be null");
+            AssignedCar = car;
+        }
+        public void SetFuelcard(Fuelcard fuelcard)
+        {
+            if (fuelcard == null) throw new DriverException("Fuelcard cannot be null");
+            AssignedFuelcard = fuelcard;
         }
 
+        //Removing of variables
         public void RemoveFuelcard()
         {
+            if (this.AssignedFuelcard == null) throw new DriverException("There is no fuelcard assigned to this driver");
             AssignedFuelcard = null;
         }
 
-        public void AddCar(Car car)
-        {
-            AssignedCar = car; 
-        }
+        
     }
 }

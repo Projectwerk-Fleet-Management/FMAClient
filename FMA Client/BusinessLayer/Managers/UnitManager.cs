@@ -8,7 +8,7 @@ namespace BusinessLayer.Managers
     {
         public void AssignFuelcard(Driver driver, Fuelcard fuelcard)
         {
-            driver.AddFuelcard(fuelcard);
+            driver.SetFuelcard(fuelcard);
             fuelcard.addDriver(driver);
         }
 
@@ -20,7 +20,7 @@ namespace BusinessLayer.Managers
 
         public void AssignDriver(Car car, Driver driver)
         {
-            driver.AddCar(car);
+            driver.SetCar(car);
             car.SetDriver(driver);
         }
 
