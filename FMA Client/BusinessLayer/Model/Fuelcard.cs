@@ -85,12 +85,41 @@ namespace BusinessLayer
 
         public void addDriver(Driver d)
         {
+            if (Driver != null) throw new FuelcardException("Driver is already assigned");
+            if (d == null) throw new FuelcardException("Driver cannot be null");
             Driver = d;
         }
 
         public void removeDriver()
         {
+            if (Driver == null) throw new FuelcardException("Fuelcard does not have driver to remove");
             Driver = null;
+        }
+
+        public void SetPincode(string pincode)
+        {
+            if (Pincode != null) throw new FuelcardException("There already is a pincode");
+            Pincode = pincode;
+        }
+
+        public void ChangePincode(string pincode)
+        {
+            if (Pincode == null) throw new FuelcardException("You cannot change an empty pincode");
+            Pincode = pincode;
+
+        }
+
+        public void AddFueltype(Fuel fueltype)
+        {
+            if (FueltypeList.Contains(fueltype)) throw new FuelcardException("Fuelcard already contains fueltype"); 
+            FueltypeList.Add(fueltype);
+        }
+
+        public void RetractFueltype(Fuel fueltype)
+        {
+            if (!FueltypeList.Contains(fueltype))
+                throw new FuelcardException("Card doesn't contain fueltype to be removed");
+            FueltypeList.Remove(fueltype);
         }
 
     }

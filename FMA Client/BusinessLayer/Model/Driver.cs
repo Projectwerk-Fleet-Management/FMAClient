@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using BusinessLayer.Model;
 using BusinessLayer.Exceptions;
 using BusinessLayer.Validators;
@@ -105,6 +106,12 @@ namespace BusinessLayer
             if (car == null) throw new DriverException("Car cannot be null");
             AssignedCar = car;
         }
+
+        public void RemoveCar()
+        {
+            if (AssignedCar == null) throw new DriverException("Car is already null");
+            AssignedCar = null;
+        }
         public void SetFuelcard(Fuelcard fuelcard)
         {
             if (fuelcard == null) throw new DriverException("Fuelcard cannot be null");
@@ -116,6 +123,24 @@ namespace BusinessLayer
         {
             if (this.AssignedFuelcard == null) throw new DriverException("There is no fuelcard assigned to this driver");
             AssignedFuelcard = null;
+        }
+
+        public void SetAddress(Address address)
+        {
+            if (address == null) throw new DriverException("Address cannot be null");
+            Address = address;
+        }
+
+        public void AddLicense(LicenseType license)
+        {
+            if (Licenses.Contains(license)) throw new DriverException("Driver already has this license");
+            Licenses.Add(license);
+        }
+
+        public void RemoveLicense(LicenseType license)
+        {
+            if (!Licenses.Contains(license)) throw new DriverException("Driver does not have this license");
+            Licenses.Remove(license);
         }
 
         
