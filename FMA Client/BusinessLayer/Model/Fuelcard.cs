@@ -122,5 +122,10 @@ namespace BusinessLayer
             FueltypeList.Remove(fueltype);
         }
 
+        public void BlockFuelcard()
+        {
+            isActive = false;
+        }
+
     }
 }

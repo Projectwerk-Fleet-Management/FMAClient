@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Exceptions;
+﻿using System;
+using BusinessLayer.Exceptions;
 
 namespace BusinessLayer
 {
@@ -196,6 +197,28 @@ namespace BusinessLayer
         {
             this.Driver = null;
         }
+
+        public void SetColor(string color)
+        {
+            if (Colour != null) throw new CarException("Car already has a color");
+            Colour = color;
+        }
+
+        public void SetDoors(string doors)
+        {
+            if (doors != null && Doors == null)
+            {
+                Doors = doors;
+            }
+            else
+            {
+                throw new CarException(
+                    "Doors could not be set because either Doors was previously set or doors was null");
+
+            }
+            
+        }
+
 
     }
 }

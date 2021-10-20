@@ -22,12 +22,23 @@
             fuelcard.RetractFueltype(type);
         }
 
-        //addfueltype
-        //retractfueltype
-        //blockfuelcard
-        //retractdriverfromfuelcard
-        //assigndrivertofuelcard
-        //retractfuelcardfromall
-        
+        public void BlockFuelard(Fuelcard card)
+        {
+            //ASK: Should blocking a card also remove it from a driver
+            card.BlockFuelcard();
+        }
+
+        public void RetractDriverFromFuelcard(Fuelcard card)
+        {
+            card.Driver.RemoveFuelcard();
+            card.removeDriver();
+        }
+
+        public void AssignDriverToFuelcard(Fuelcard card, Driver driver)
+        {
+            card.addDriver(driver);
+            driver.SetFuelcard(card);
+        }
+
     }
 }
