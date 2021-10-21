@@ -24,7 +24,7 @@
 
         public void BlockFuelard(Fuelcard card)
         {
-            //ASK: Should blocking a card also remove it from a driver
+            //ASK: Should blocking a card also remove it from a driver -- Addition from Bryan: I don't think it should, a card can temporarly be blocked
             card.BlockFuelcard();
         }
 
