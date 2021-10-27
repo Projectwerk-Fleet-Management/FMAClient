@@ -13,7 +13,7 @@ namespace BusinessLayer.Validators
             int sum = 0;
             int checkDigit = 0;
             string allowedLetters = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789";
-            if (vin == null) throw new VINValidatorException("VINValidator - VIN is empty");
+            if (string.IsNullOrWhiteSpace(vin)) throw new VINValidatorException("VINValidator - VIN is empty");
             if (vin.Length != _VINLength) throw new VINValidatorException($"VINValidator - VIN length isn't equal to {_VINLength}");
 
             foreach (char c in vin)
