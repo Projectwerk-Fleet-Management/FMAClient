@@ -119,7 +119,9 @@ namespace BusinessLayer
         public void SetDriver(Driver driver)
         {
             if (driver == null) throw new CarException("Driver cannot be null");
+            driver.SetCar(this);
             this.Driver = driver;
+
         }
         public void SetColour(string colour)
         {
@@ -153,6 +155,7 @@ namespace BusinessLayer
         //Remove methodes
         public void RemoveDriver()
         {
+            Driver.RemoveCar();
             this.Driver = null;
         }
     }

@@ -110,11 +110,13 @@ namespace BusinessLayer
         public void RemoveCar()
         {
             if (AssignedCar == null) throw new DriverException("Car is already null");
+            AssignedCar.Driver.RemoveCar();
             AssignedCar = null;
         }
         public void SetFuelcard(Fuelcard fuelcard)
         {
             if (fuelcard == null) throw new DriverException("Fuelcard cannot be null");
+            fuelcard.addDriver(this);
             AssignedFuelcard = fuelcard;
         }
 
@@ -122,6 +124,7 @@ namespace BusinessLayer
         public void RemoveFuelcard()
         {
             if (this.AssignedFuelcard == null) throw new DriverException("There is no fuelcard assigned to this driver");
+            AssignedFuelcard.removeDriver();
             AssignedFuelcard = null;
         }
 
