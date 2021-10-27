@@ -22,6 +22,11 @@ namespace DAL
             return connection;
         }
 
+        public IReadOnlyList<Driver> GetDrivers()
+        {
+            throw new NotImplementedException();
+        }
+
         public IReadOnlyList<Driver> GetDrivers(string? id, string? firstName, string? lastName, DateTime? dateOfBirth, string? nationalIdentificationNumber, string? vin, string? fuelcardNumber, string? license, bool strikt = true)
         {
             List<Driver> drivers = new();
@@ -123,7 +128,7 @@ namespace DAL
                     query += " UPPER(licenses) LIKE UPPER('%@license%')";
                 }
             }
-            if (dateOfBirth == null)
+            if (dateOfBirth != null)
             {
                 if (!WHERE) query += " WHERE"; WHERE = true;
                 if (AND) query += " AND"; else AND = true;
@@ -159,10 +164,37 @@ namespace DAL
                     }
                     if (!string.IsNullOrWhiteSpace(nationalIdentificationNumber))
                     {
-                        command.Parameters.Add(new SqlParameter("@id", SqlDbType.NVarChar));
-                        command.Parameters[@id].Value = id;
+                        command.Parameters.Add(new SqlParameter("@nationalIdentificationNumber", SqlDbType.NVarChar));
+                        command.Parameters[@nationalIdentificationNumber].Value = nationalIdentificationNumber;
                     }
+                    if (!string.IsNullOrWhiteSpace(vin))
+                    {
+                        command.Parameters.Add(new SqlParameter("@vin", SqlDbType.NVarChar));
+                        command.Parameters[@vin].Value = vin;
+                    }
+                    if (!string.IsNullOrWhiteSpace(fuelcardNumber))
+                    {
+                        command.Parameters.Add(new SqlParameter("@fuelcardNumber", SqlDbType.NVarChar));
+                        command.Parameters[@fuelcardNumber].Value = fuelcardNumber;
+                    }
+                    //TODO check why it's underlinded
+                    if (!string.IsNullOrWhiteSpace(license))
+                    {
+                        command.Parameters.Add(new SqlParameter("@licenses", SqlDbType.NVarChar));
+                        command.Parameters[@licenses].Value = license;
+                    }
+                    if (dateOfBirth != null)
+                    {
+                        command.Parameters.Add(new SqlParameter("@dateOfBirth", SqlDbType.Timestamp));
+                        command.Parameters[@dateOfBirth].Value = dateOfBirth;
+                    }
+                    command.CommandText = query;
 
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        //TODO: add the read object to the list
+                    }
                 } catch (Exception)
                 {
                     throw;
@@ -172,24 +204,26 @@ namespace DAL
             return drivers;
         }
 
-        public void DeleteDriver()
+        public void DeleteDriver(Driver driver)
         {
             throw new NotImplementedException();
         }
 
-        public bool Exists()
+        public bool Exists(Driver driver)
         {
             throw new NotImplementedException();
         }      
 
-        public void InsertDriver()
+        public void InsertDriver(Driver driver)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateDriver()
+        public void UpdateDriver(Driver driver)
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
