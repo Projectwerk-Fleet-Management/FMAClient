@@ -8,13 +8,7 @@ namespace BusinessLayer.Interfaces
 {
     public interface IDriverRepository
     {
-        IReadOnlyList<Driver> GetDrivers();
-        IReadOnlyList<Driver> GetDriversById(string id);
-        IReadOnlyList<Driver> GetDriversByFirstName(string firstName);
-        IReadOnlyList<Driver> GetDriversByLastName(string lastName);
-        IReadOnlyList<Driver> GetDriversByDateOfBirth(DateTime dateOfBirth);
-        IReadOnlyList<Driver> GetDriverByNIN(string nationalIdentificationNumber);
-        IReadOnlyList<Driver> GetDriverByCar(Car car);
+        IReadOnlyList<Driver> GetDrivers(string? id, string? firstName, string? lastName, DateTime? dateOfBirth, string? nationalIdentificationNumber, string? vin, string? fuelcardNumber, string? license, bool strikt = true);
         bool Exists();
         void InsertDriver();
         void DeleteDriver();
