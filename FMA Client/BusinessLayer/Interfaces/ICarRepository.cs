@@ -8,10 +8,11 @@ namespace BusinessLayer.Interfaces
 {
     public interface ICarRepository
     {
-        IReadOnlyList<Driver> GetCars(string? vin, string? make, string? model, string? licensePlate, string? fuelType, string? colour, string? doors, string? driverId, string? vehicleType, bool strikt = true);
-        bool Exists();
-        void InsertCar();
-        void DeleteCar();
-        void UpdateCar();
+        IReadOnlyList<Car> GetCars();
+        IReadOnlyList<Car> GetCars(string? vin, string? make, string? model, string? licensePlate, string? fuelType, string? colour, string? doors, string? driverId, string? vehicleType, bool strikt = true);
+        bool Exists(Car car);
+        void InsertCar(Car car);
+        void DeleteCar(Car car);
+        void UpdateCar(Car car);
     }
 }
