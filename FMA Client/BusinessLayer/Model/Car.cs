@@ -1,5 +1,6 @@
 ﻿using System;
 using BusinessLayer.Exceptions;
+using BusinessLayer.Validators;
 
 namespace BusinessLayer
 {
@@ -19,191 +20,112 @@ namespace BusinessLayer
         public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors,
             Driver Driver, string Type, Fuel FuelType)
         {
-            if (Make == null)
-            {
-                throw new CarException("Make of car is not allowed to be null");
-            }
-            this.Make = Make;
-            if (Model == null)
-            {
-                throw new CarException("Model of a car cannot be null");
-            }
-            this.Model = Model;
-            if (Vin == null)
-                //todo: Vin check here somewhere
-            {
-                throw new CarException("The VIN of a car cannot be null");
-            }
-            this.Vin = Vin;
-            if (Licenseplate == null)
-            {
-                //todo: check license plate
-                throw new CarException("Licenseplate cannot be null");
-            }
-            this.Licenseplate = Licenseplate;
-            this.Colour = Colour;
-            this.Doors = Doors;
-            this.Driver = Driver;
-            if (Type == null)
-            {
-                throw new CarException("Type cannot be null");
-            }
-            this.Type = Type;
-            this.FuelType = FuelType;
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetColour(Colour);
+            SetDoors(Doors);
+            SetDriver(Driver);
+            SetType(Type);
+            SetFueltype(FuelType);
         }
 
         //Without colour, doors and driver
         public Car(string Make, string Model, string Vin, string Licenseplate, string Type, Fuel FuelType)
         {
-            if (Make == null)
-            {
-                throw new CarException("Make of car is not allowed to be null");
-            }
-            this.Make = Make;
-            if (Model == null)
-            {
-                throw new CarException("Model of a car cannot be null");
-            }
-            this.Model = Model;
-            if (Vin == null)
-            //todo: Vin check here somewhere
-            {
-                throw new CarException("The VIN of a car cannot be null");
-            }
-            this.Vin = Vin;
-            if (Licenseplate == null)
-            {
-                //todo: check license plate
-                throw new CarException("Licenseplate cannot be null");
-            }
-            this.Licenseplate = Licenseplate;
-            if (Type == null)
-            {
-                throw new CarException("Type cannot be null");
-            }
-            this.Type = Type;
-            this.FuelType = FuelType;
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetType(Type);
+            SetFueltype(FuelType);
         }
 
         //Without doors and driver
         public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Type, Fuel FuelType)
         {
-            if (Make == null)
-            {
-                throw new CarException("Make of car is not allowed to be null");
-            }
-            this.Make = Make;
-            if (Model == null)
-            {
-                throw new CarException("Model of a car cannot be null");
-            }
-            this.Model = Model;
-            if (Vin == null)
-            //todo: Vin check here somewhere
-            {
-                throw new CarException("The VIN of a car cannot be null");
-            }
-            this.Vin = Vin;
-            if (Licenseplate == null)
-            {
-                //todo: check license plate
-                throw new CarException("Licenseplate cannot be null");
-            }
-            this.Licenseplate = Licenseplate;
-            this.Colour = Colour;
-
-            if (Type == null)
-            {
-                throw new CarException("Type cannot be null");
-            }
-            this.Type = Type;
-            this.FuelType = FuelType;
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetColour(Colour);
+            SetType(Type);
+            SetFueltype(FuelType);
         }
 
         //Without driver
         public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors, string Type, Fuel FuelType)
         {
-            if (Make == null)
-            {
-                throw new CarException("Make of car is not allowed to be null");
-            }
-            this.Make = Make;
-            if (Model == null)
-            {
-                throw new CarException("Model of a car cannot be null");
-            }
-            this.Model = Model;
-            if (Vin == null)
-            //todo: Vin check here somewhere
-            {
-                throw new CarException("The VIN of a car cannot be null");
-            }
-            this.Vin = Vin;
-            if (Licenseplate == null)
-            {
-                //todo: check license plate
-                throw new CarException("Licenseplate cannot be null");
-            }
-            this.Licenseplate = Licenseplate;
-            this.Colour = Colour;
-            this.Doors = Doors;
-            if (Type == null)
-            {
-                throw new CarException("Type cannot be null");
-            }
-            this.Type = Type;
-            this.FuelType = FuelType;
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetColour(Colour);
+            SetDoors(Doors);
+            SetType(Type);
+            SetFueltype(FuelType);
         }
 
         //Without colour and doors
         public Car(string Make, string Model, string Vin, string Licenseplate, Driver Driver, string Type, Fuel FuelType)
         {
-            if (Make == null)
-            {
-                throw new CarException("Make of car is not allowed to be null");
-            }
-            this.Make = Make;
-            if (Model == null)
-            {
-                throw new CarException("Model of a car cannot be null");
-            }
-            this.Model = Model;
-            if (Vin == null)
-            //todo: Vin check here somewhere
-            {
-                throw new CarException("The VIN of a car cannot be null");
-            }
-            this.Vin = Vin;
-            if (Licenseplate == null)
-            {
-                //todo: check license plate
-                throw new CarException("Licenseplate cannot be null");
-            }
-            this.Licenseplate = Licenseplate;
-            this.Driver = Driver;
-            if (Type == null)
-            {
-                throw new CarException("Type cannot be null");
-            }
-            this.Type = Type;
-            this.FuelType = FuelType;
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetDriver(Driver);
+            SetType(Type);
+            SetFueltype(FuelType);
         }
 
+        //Without colour
+        public Car(string Make, string Model, string Vin, string Licenseplate, string Doors, Driver Driver, string Type, Fuel FuelType)
+        {
+            SetMake(Make);
+            SetModel(Model);
+            SetVIN(Vin);
+            SetLicenseplate(Licenseplate);
+            SetDoors(Doors);
+            SetDriver(Driver);
+            SetType(Type);
+            SetFueltype(FuelType);
+        }
+
+        //Set methodes
+        public void SetMake(string make)
+        {
+            if (make == null) throw new CarException("Make of car is not allowed to be null");
+            this.Make = make;
+        }
+        public void SetModel(string model)
+        {
+            if (model == null) throw new CarException("Model of a car cannot be null");
+            this.Model = model;
+        }
+        public void SetVIN(string vin)
+        {
+            VINValidator x = new VINValidator();
+            if (!x.IsValid(vin)) throw new CarException("VIN is not valid");
+            this.Vin = vin;
+        }
+        public void SetLicenseplate(string licenseplate)
+        {
+            LicenseplateValidator x = new LicenseplateValidator();
+            if (licenseplate == null) throw new CarException("Licenseplate cannot be null");
+            if (!x.isValid(licenseplate)) throw new CarException("Licenseplate is not valid");
+            this.Licenseplate = licenseplate;
+        }
         public void SetDriver(Driver driver)
         {
+            if (driver == null) throw new CarException("Driver cannot be null");
             this.Driver = driver;
         }
-        public void RemoveDriver()
+        public void SetColour(string colour)
         {
-            this.Driver = null;
+            if (colour == null) throw new CarException("Colour cannot be null");
+            this.Colour = colour;
         }
-
-        public void SetColor(string color)
-        {
-            if (Colour != null) throw new CarException("Car already has a color");
-            Colour = color;
-        }
-
         public void SetDoors(string doors)
         {
             if (doors != null && Doors == null)
@@ -214,11 +136,24 @@ namespace BusinessLayer
             {
                 throw new CarException(
                     "Doors could not be set because either Doors was previously set or doors was null");
-
             }
             
         }
+        public void SetType(string type)
+        {
+            if (type == null) throw new CarException("Type cannot be null");
+            this.Type = type;
+        }
+        public void SetFueltype(Fuel fueltype)
+        {
+            if (fueltype == null) throw new CarException("Fueltype cannot be null");
+            this.FuelType = fueltype;
+        }
 
-
+        //Remove methodes
+        public void RemoveDriver()
+        {
+            this.Driver = null;
+        }
     }
 }

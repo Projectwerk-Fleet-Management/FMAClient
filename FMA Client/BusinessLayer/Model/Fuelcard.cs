@@ -16,6 +16,8 @@ namespace BusinessLayer
 
         private FuelcardNumberValidator validator = new FuelcardNumberValidator();
 
+
+        //TODO: Add set/remove methodes
         public Fuelcard(string cardnumber, DateTime expiryDate)
         {
             if (cardnumber == null)
