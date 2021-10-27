@@ -386,3 +386,31 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+*.json
+FMA Client/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+*.props
+*.cache
+FMA Client/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+FMA Client/.vs/FMA Client/DesignTimeBuild/.dtbcache.v2
+FMA Client/.vs/FMA Client/v16/.suo
+FMA Client/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+FMA Client/BusinessLayer/obj/BusinessLayer.csproj.nuget.g.props
+FMA Client/BusinessLayer/obj/Debug/net5.0/BusinessLayer.assets.cache
+FMA Client/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.AssemblyReference.cache
+FMA Client/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+FMA Client/BusinessLayer/obj/project.assets.json
+FMA Client/BusinessLayer/obj/project.nuget.cache
+FMA Client/BusinessLayerTests/bin/Debug/net5.0/CoverletSourceRootsMapping
+FMA Client/BusinessLayerTests/obj/BusinessLayerTests.csproj.nuget.dgspec.json
+FMA Client/BusinessLayerTests/obj/BusinessLayerTests.csproj.nuget.g.props
+FMA Client/BusinessLayerTests/obj/Debug/net5.0/BusinessLayerTests.assets.cache
+FMA Client/BusinessLayerTests/obj/Debug/net5.0/BusinessLayerTests.GeneratedMSBuildEditorConfig.editorconfig
+FMA Client/BusinessLayerTests/obj/project.assets.json
+FMA Client/BusinessLayerTests/obj/project.nuget.cache
+FMA Client/FMA Client/obj/Debug/net5.0/FMA Client.assets.cache
+FMA Client/FMA Client/obj/Debug/net5.0/FMA Client.csproj.AssemblyReference.cache
+FMA Client/FMA Client/obj/Debug/net5.0/FMA Client.GeneratedMSBuildEditorConfig.editorconfig
+FMA Client/FMA Client/obj/FMA Client.csproj.nuget.dgspec.json
+FMA Client/FMA Client/obj/FMA Client.csproj.nuget.g.props
+FMA Client/FMA Client/obj/project.assets.json
+FMA Client/FMA Client/obj/project.nuget.cache
