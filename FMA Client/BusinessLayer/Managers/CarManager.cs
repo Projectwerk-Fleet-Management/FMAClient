@@ -16,12 +16,27 @@ namespace BusinessLayer.Managers
 
         public IReadOnlyList<Car>GetCars()
         {
-            return _repo.GetCars();
+            try
+            {
+                return _repo.GetCars();
+            }
+            catch (Exception e)
+            {
+                throw new CarmanagerException("couldn't get all cars", e);
+            }
         }
 
         public IReadOnlyList<Car> GetCars(string? vin, string? make, string? model, string? licensePlate, string? fuelType, string? colour, string? doors, string? driverId, string? vehicleType, bool strikt = true)
         {
-            return _repo.GetCars(vin, make, model, licensePlate, fuelType, colour, doors, driverId, vehicleType, true);
+            try
+            {
+                return _repo.GetCars(vin, make, model, licensePlate, fuelType, colour, doors, driverId, vehicleType, true);
+
+            }
+            catch (Exception e)
+            {
+                throw new CarmanagerException("couldn't get cars", e);
+            }
         }
 
         public Car GetCarByCin(string vin)
@@ -37,5 +52,53 @@ namespace BusinessLayer.Managers
             }
         }
 
+        public bool Exists(Car car)
+        {
+            try
+            {
+                return _repo.Exists(car);
+            }
+            catch (Exception e)
+            {
+
+                throw new CarmanagerException("couldn't execute if exists", e);
+            }
+        }
+
+        public void InsertCar(Car car)
+        {
+            try
+            {
+                _repo.InsertCar(car);
+            }
+            catch (Exception e)
+            {
+                throw new CarmanagerException("couldn't insert car", e);
+            }
+        }
+
+        public void DeleteCar(Car car)
+        {
+            try
+            {
+                _repo.DeleteCar(car);
+            }
+            catch(Exception e)
+            {
+                throw new CarmanagerException("couldn't delete car", e);
+            }
+        }
+
+        public void UpdateCar(Car car)
+        {
+            try
+            {
+                _repo.UpdateCar(car);
+            }
+            catch (Exception e)
+            {
+                throw new CarmanagerException("can't update car", e);
+            }
+        }
     }
 }
