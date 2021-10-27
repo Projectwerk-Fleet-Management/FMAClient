@@ -89,12 +89,14 @@ namespace BusinessLayer
         {
             if (Driver != null) throw new FuelcardException("Driver is already assigned");
             if (d == null) throw new FuelcardException("Driver cannot be null");
+            d.SetFuelcard(this);
             Driver = d;
         }
 
         public void removeDriver()
         {
             if (Driver == null) throw new FuelcardException("Fuelcard does not have driver to remove");
+            Driver.RemoveFuelcard();
             Driver = null;
         }
 
