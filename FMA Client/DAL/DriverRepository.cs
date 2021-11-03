@@ -24,7 +24,35 @@ namespace DAL
 
         public IReadOnlyList<Driver> GetDrivers()
         {
-            throw new NotImplementedException();
+            List<Driver> drivers = new();
+            SqlConnection connection = getConnection();
+            string query = "SELECT * FROM dbo.driver";
+
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataReader datareader = command.ExecuteReader();
+                    while (datareader.Read())
+                    {
+                        string id = (string)datareader["id"];
+                        string firstName = (string)datareader["firstName"];
+                        string lastName = (string)datareader["lastName"];
+
+                        drivers.Add();
+                        return drivers;
+                    }
+
+                    datareader.Close();
+                } catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                } finally
+                {
+                    connection.Close();
+                }
+            }
         }
 
         public IReadOnlyList<Driver> GetDrivers(string? id, string? firstName, string? lastName, DateTime? dateOfBirth, string? nationalIdentificationNumber, string? vin, string? fuelcardNumber, string? license, bool strikt = true)

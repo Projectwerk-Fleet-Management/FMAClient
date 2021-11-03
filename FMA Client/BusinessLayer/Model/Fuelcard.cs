@@ -7,6 +7,7 @@ namespace BusinessLayer
 {
     public class Fuelcard
     {
+        public int FuelcardId { private set; get; }
         public string Cardnumber { private set; get; }
         public DateTime ExpiryDate { private set; get; }
         public string Pincode { private set; get; }
