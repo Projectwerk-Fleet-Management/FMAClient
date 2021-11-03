@@ -4,8 +4,6 @@
     {
         Benzine,
         Diesel,
-        HybrideBenzine,
-        HybrideDiesel,
         Electrisch
     }
 }
