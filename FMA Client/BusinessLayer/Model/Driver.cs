@@ -9,7 +9,7 @@ namespace BusinessLayer
 {
     public class Driver
     {
-        public string DriverId { get; private set; }
+        public int DriverId { get; private set; }
         public string LastName { get; private set; }
         public string FirstName { get; private set; }
         public Address Address { get; private set; }
@@ -20,8 +20,19 @@ namespace BusinessLayer
         public Fuelcard AssignedFuelcard { get; private set; }
         private static NINValidator NINValidator = new NINValidator();
 
+        //Constructor without car, fuelcard and address
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
+        {
+            SetDriverId(driverId);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);
+        }
+
         //Constructor without car and fuelcard
-        public Driver(string driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Address address)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Address address)
         {
             SetDriverId(driverId);
             SetLastName(lastName);
@@ -33,7 +44,7 @@ namespace BusinessLayer
         }
 
         //Constructor with car and without fuelcard
-        public Driver(string driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Address address)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Address address)
         {
             SetDriverId(driverId);
             SetLastName(lastName);
@@ -46,7 +57,7 @@ namespace BusinessLayer
         }
 
         //Constructor without car and with fuelcard
-        public Driver(string driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard, Address address)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard, Address address)
         {
             SetDriverId(driverId);
             SetLastName(lastName);
@@ -59,7 +70,7 @@ namespace BusinessLayer
         }
 
         //Constructor with car and fuelcard
-        public Driver(string driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard, Address address)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard, Address address)
         {
             SetDriverId(driverId);
             SetLastName(lastName);
@@ -73,10 +84,9 @@ namespace BusinessLayer
         }
 
         #region Setting of variables
-        public void SetDriverId(string driverId)
+        public void SetDriverId(int driverId)
         {
-            if (driverId == null) throw new DriverException("id cannot be null");
-            if (Convert.ToInt64(Math.Floor(decimal.Parse(driverId))) <= 0) throw new DriverException("Id is less or equal to zero");
+            if (driverId <= 0) throw new DriverException("Id is less or equal to zero");
             this.DriverId = driverId;
         }
         public void SetLastName(string lastName)

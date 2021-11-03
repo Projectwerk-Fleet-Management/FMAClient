@@ -4,6 +4,7 @@ using BusinessLayer;
 using BusinessLayer.Interfaces;
 using System.Data;
 using System.Data.SqlClient;
+using BusinessLayer.Model;
 
 namespace DAL
 {
@@ -26,25 +27,44 @@ namespace DAL
         {
             List<Driver> drivers = new();
             SqlConnection connection = getConnection();
-            string query = "SELECT * FROM dbo.driver";
+            string query = "SELECT * FROM dbo.drivers";
 
             using (SqlCommand command = connection.CreateCommand())
             {
                 try
                 {
                     connection.Open();
+                    command.CommandText = query;
                     SqlDataReader datareader = command.ExecuteReader();
                     while (datareader.Read())
                     {
-                        string id = (string)datareader["id"];
+                        //Check hoe je een foreign key data krijgt
+                        int driverId = (int)datareader["driverId"];
                         string firstName = (string)datareader["firstName"];
                         string lastName = (string)datareader["lastName"];
+                        DateTime dateOfBirth = (DateTime)datareader["dateOfBirth"];
+                        int nationalIdentificationNumber = (int)datareader["nationalIdentificationNumber"];
+                        string licensesDb = (string)datareader["licenses"];
 
-                        drivers.Add();
-                        return drivers;
-                    }
+                        List<LicenseType> licenses = new();
 
+                        //Check if licenseDb is valid in the enum and add it to the licenses -> Also do a for loop for each license in licensesDb
+                        if (LicenseType.A.ToString() == licensesDb)
+                        {
+
+                            break;
+                        } else if (true)
+                        {
+
+                            break;
+                        }
+
+                        Driver driver = new(driverId, lastName, firstName, dateOfBirth, nationalIdentificationNumber.ToString(), licenses);
+
+                        drivers.Add(driver);                      
+                    }                  
                     datareader.Close();
+
                 } catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
@@ -52,6 +72,8 @@ namespace DAL
                 {
                     connection.Close();
                 }
+
+                return drivers;
             }
         }
 
