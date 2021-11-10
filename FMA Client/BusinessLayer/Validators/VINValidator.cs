@@ -6,7 +6,8 @@ namespace BusinessLayer.Validators
 {
     public class VINValidator
     {
-        private int _VINLength = 17; // VIN has a length of 17 (used to be 11 before 1981 but that's not the case anymore)       
+        private int _VINLength = 17; // VIN has a length of 17 (used to be 11 before 1981 but that's not the case anymore)
+        // https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Check_digit refernce to the wikipedia page used for the validation of vins
 
         public bool IsValid(string vin)
         {
