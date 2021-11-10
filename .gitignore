@@ -414,3 +414,6 @@ FMA Client/FMA Client/obj/FMA Client.csproj.nuget.dgspec.json
 FMA Client/FMA Client/obj/FMA Client.csproj.nuget.g.props
 FMA Client/FMA Client/obj/project.assets.json
 FMA Client/FMA Client/obj/project.nuget.cache
+*.props
+*.cache
+*.editorconfig
