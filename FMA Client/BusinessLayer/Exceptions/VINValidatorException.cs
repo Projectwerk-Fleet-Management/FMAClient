@@ -2,7 +2,7 @@
 
 namespace BusinessLayer.Exceptions
 {
-    class VINValidatorException : Exception
+    public class VINValidatorException : Exception
     {
         public VINValidatorException(string message) : base(message)
         {
