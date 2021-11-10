@@ -9,7 +9,7 @@ namespace BusinessLayer
 {
     public class Driver
     {
-        public string Id { get; private set; }
+        public int DriverId { get; private set; }
         public string LastName { get; private set; }
         public string FirstName { get; private set; }
         public Address Address { get; private set; }
@@ -20,46 +20,59 @@ namespace BusinessLayer
         public Fuelcard AssignedFuelcard { get; private set; }
         private static NINValidator NINValidator = new NINValidator();
 
-        //TODO: Address add to constructors
-        //Constructor without car and fuelcard
-        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
+        //Constructor without car, fuelcard and address
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses)
         {
-            SetId(id);
+            SetDriverId(driverId);
             SetLastName(lastName);
             SetFirstName(firstName);
             SetDateOfBirth(dateOfBirth);
             SetNationalIdentificationNumber(nationalIdentificationNumber);
-            SetLicenses(licenses);   
+            SetLicenses(licenses);
+        }
+
+        //Constructor without car and fuelcard
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Address address)
+        {
+            SetDriverId(driverId);
+            SetLastName(lastName);
+            SetFirstName(firstName);
+            SetDateOfBirth(dateOfBirth);
+            SetNationalIdentificationNumber(nationalIdentificationNumber);
+            SetLicenses(licenses);
+            SetAddress(address);
         }
 
         //Constructor with car and without fuelcard
-        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Address address)
         {
-            SetId(id);
+            SetDriverId(driverId);
             SetLastName(lastName);
             SetFirstName(firstName);
             SetDateOfBirth(dateOfBirth);
             SetNationalIdentificationNumber(nationalIdentificationNumber);
             SetLicenses(licenses);
             SetCar(assignedCar);
+            SetAddress(address);
         }
 
         //Constructor without car and with fuelcard
-        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard)
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Fuelcard assignedFuelcard, Address address)
         {
-            SetId(id);
+            SetDriverId(driverId);
             SetLastName(lastName);
             SetFirstName(firstName);
             SetDateOfBirth(dateOfBirth);
             SetNationalIdentificationNumber(nationalIdentificationNumber);
             SetLicenses(licenses);
             SetFuelcard(assignedFuelcard);
+            SetAddress(address);
         }
 
         //Constructor with car and fuelcard
-        public Driver(string id, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard)
-        {          
-            SetId(id);
+        public Driver(int driverId, string lastName, string firstName, DateTime dateOfBirth, string nationalIdentificationNumber, List<LicenseType> licenses, Car assignedCar, Fuelcard assignedFuelcard, Address address)
+        {
+            SetDriverId(driverId);
             SetLastName(lastName);
             SetFirstName(firstName);
             SetDateOfBirth(dateOfBirth);
@@ -67,14 +80,14 @@ namespace BusinessLayer
             SetLicenses(licenses);
             SetCar(assignedCar);
             SetFuelcard(assignedFuelcard);
+            SetAddress(address);
         }
 
-        //Setting of variables
-        public void SetId(string id)
+        #region Setting of variables
+        public void SetDriverId(int driverId)
         {
-            if (id == null) throw new DriverException("id cannot be null");
-            if (Convert.ToInt64(Math.Floor(decimal.Parse(id))) <= 0) throw new DriverException("Id is less or equal to zero");
-            this.Id = id;
+            if (driverId <= 0) throw new DriverException("Id is less or equal to zero");
+            this.DriverId = driverId;
         }
         public void SetLastName(string lastName)
         {
@@ -106,46 +119,46 @@ namespace BusinessLayer
             if (car == null) throw new DriverException("Car cannot be null");
             AssignedCar = car;
         }
-
-        public void RemoveCar()
-        {
-            if (AssignedCar == null) throw new DriverException("Car is already null");
-            AssignedCar.Driver.RemoveCar();
-            AssignedCar = null;
-        }
         public void SetFuelcard(Fuelcard fuelcard)
         {
             if (fuelcard == null) throw new DriverException("Fuelcard cannot be null");
             fuelcard.addDriver(this);
             AssignedFuelcard = fuelcard;
         }
+        public void SetAddress(Address address)
+        {
+            if (address == null) throw new DriverException("Address cannot be null");
+            Address = address;
+        }
+        #endregion
 
-        //Removing of variables
+        #region Adding of license
+        public void AddLicense(LicenseType license)
+        {
+            if (Licenses.Contains(license)) throw new DriverException("Driver already has this license");
+            Licenses.Add(license);
+        }
+        #endregion
+
+        #region Removing of variables
         public void RemoveFuelcard()
         {
             if (this.AssignedFuelcard == null) throw new DriverException("There is no fuelcard assigned to this driver");
             AssignedFuelcard.removeDriver();
             AssignedFuelcard = null;
         }
-
-        public void SetAddress(Address address)
+        public void RemoveCar()
         {
-            if (address == null) throw new DriverException("Address cannot be null");
-            Address = address;
+            if (AssignedCar == null) throw new DriverException("Car is already null");
+            AssignedCar.Driver.RemoveCar();
+            AssignedCar = null;
         }
-
-        public void AddLicense(LicenseType license)
-        {
-            if (Licenses.Contains(license)) throw new DriverException("Driver already has this license");
-            Licenses.Add(license);
-        }
-
         public void RemoveLicense(LicenseType license)
         {
             if (!Licenses.Contains(license)) throw new DriverException("Driver does not have this license");
             Licenses.Remove(license);
         }
+        #endregion
 
-        
     }
 }

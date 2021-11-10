@@ -6,6 +6,7 @@ namespace BusinessLayer
 {
     public class Car
     {
+        public int carId { private set; get; }
         public string Make { private set; get; }
         public string Model { private set; get; }
         public string Vin { private set; get; }
@@ -17,9 +18,10 @@ namespace BusinessLayer
         public Fuel FuelType { private set; get; }
 
         //Everything
-        public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors,
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors,
             Driver Driver, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -32,8 +34,9 @@ namespace BusinessLayer
         }
 
         //Without colour, doors and driver
-        public Car(string Make, string Model, string Vin, string Licenseplate, string Type, Fuel FuelType)
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -43,8 +46,9 @@ namespace BusinessLayer
         }
 
         //Without doors and driver
-        public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Type, Fuel FuelType)
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, string Colour, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -55,8 +59,9 @@ namespace BusinessLayer
         }
 
         //Without driver
-        public Car(string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors, string Type, Fuel FuelType)
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, string Colour, string Doors, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -68,8 +73,9 @@ namespace BusinessLayer
         }
 
         //Without colour and doors
-        public Car(string Make, string Model, string Vin, string Licenseplate, Driver Driver, string Type, Fuel FuelType)
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, Driver Driver, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -80,8 +86,9 @@ namespace BusinessLayer
         }
 
         //Without colour
-        public Car(string Make, string Model, string Vin, string Licenseplate, string Doors, Driver Driver, string Type, Fuel FuelType)
+        public Car(int carId, string Make, string Model, string Vin, string Licenseplate, string Doors, Driver Driver, string Type, Fuel FuelType)
         {
+            SetCarId(carId);
             SetMake(Make);
             SetModel(Model);
             SetVIN(Vin);
@@ -92,7 +99,12 @@ namespace BusinessLayer
             SetFueltype(FuelType);
         }
 
-        //Set methodes
+        #region Set methodes
+        public void SetCarId(int carId)
+        {
+            if (carId <= 0) throw new CarException("CarId cannot be lower or equal to zero");
+            this.carId = carId;
+        }
         public void SetMake(string make)
         {
             if (make == null) throw new CarException("Make of car is not allowed to be null");
@@ -151,12 +163,14 @@ namespace BusinessLayer
             if (fueltype == null) throw new CarException("Fueltype cannot be null");
             this.FuelType = fueltype;
         }
+        #endregion
 
-        //Remove methodes
+        #region Remove methodes
         public void RemoveDriver()
         {
             Driver.RemoveCar();
             this.Driver = null;
         }
+        #endregion
     }
 }
