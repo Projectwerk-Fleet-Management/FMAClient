@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj": {}
+    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj": {
+    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj",
+        "projectUniqueName": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj",
         "projectName": "BusinessLayerTests",
-        "projectPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj",
-        "packagesPath": "C:\\Users\\anton-maurits\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayerTests\\obj\\",
+        "projectPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayerTests\\BusinessLayerTests.csproj",
+        "packagesPath": "C:\\Users\\marni\\.nuget\\packages\\",
+        "outputPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayerTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton-maurits\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj"
+              "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -80,21 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {
+    "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\anton-maurits\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton-maurits\\Documents\\GitHub\\FMAClient\\FMA Client\\BusinessLayer\\obj\\",
+        "projectPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\marni\\.nuget\\packages\\",
+        "outputPath": "E:\\Protobear\\Development\\Unity\\FMAClient\\FMA Client\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton-maurits\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
