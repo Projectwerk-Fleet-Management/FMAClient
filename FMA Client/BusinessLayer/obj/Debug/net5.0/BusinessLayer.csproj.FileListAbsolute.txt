@@ -34,3 +34,15 @@ C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\n
 C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 C:\Users\marnick\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
+C:\Users\anton-maurits\Documents\GitHub\FMAClient\FMA Client\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
